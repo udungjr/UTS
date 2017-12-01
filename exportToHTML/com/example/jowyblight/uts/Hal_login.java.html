@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Hal_login.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Hal_login.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.jowyblight.uts; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.AppCompatActivity; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.Button; 
+</span><span class="s0">import </span><span class="s1">android.widget.EditText; 
+</span><span class="s0">import </span><span class="s1">android.widget.Toast; 
+ 
+</span><span class="s0">public class </span><span class="s1">Hal_login </span><span class="s0">extends </span><span class="s1">AppCompatActivity { 
+ 
+    Button login; 
+    EditText username, password; 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_hal_login); 
+ 
+        username = (EditText) findViewById(R.id.edituser); 
+        password = (EditText) findViewById(R.id.editpass); 
+        login = (Button) findViewById(R.id.btnlogin); 
+        login.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                String user_name = username.getText().toString(); 
+                String pass_ =  password.getText().toString(); 
+                </span><span class="s0">if </span><span class="s1">(user_name.equals(</span><span class="s2">&quot;udung&quot;</span><span class="s1">)&amp;&amp;pass_.equals(</span><span class="s2">&quot;12345&quot;</span><span class="s1">)){ 
+ 
+                    Intent login1 = </span><span class="s0">new </span><span class="s1">Intent(Hal_login.</span><span class="s0">this</span><span class="s1">, Hal_Menu_Utama.</span><span class="s0">class</span><span class="s1">); 
+                    startActivity(login1); 
+                } 
+                </span><span class="s0">else </span><span class="s1">{ 
+                    Toast.makeText(getApplicationContext(),</span><span class="s2">&quot;Username dan Pssword tidak sesuai Anda gagal Login&quot;</span><span class="s1">,Toast.LENGTH_SHORT).show(); 
+                } 
+            } 
+        }); 
+ 
+ 
+    } 
+} 
+</span></pre>
+</body>
+</html>

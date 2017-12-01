@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">UTS</string>
+    <string name="plus_button" />
+    <string name="minus_button" />
+    <string name="addone">+1</string>
+    <string name="subbtractone">-1</string>
+</resources>

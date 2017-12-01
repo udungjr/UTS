@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Hal_Menu_Utama.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Hal_Menu_Utama.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.jowyblight.uts; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.AppCompatActivity; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.Button; 
+ 
+</span><span class="s0">public class </span><span class="s1">Hal_Menu_Utama </span><span class="s0">extends </span><span class="s1">AppCompatActivity { 
+ 
+    Button list, about, exit; 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_hal__menu__utama); 
+ 
+        list = (Button) findViewById(R.id.btnlist); 
+        about = (Button) findViewById(R.id.btnabout); 
+        exit = (Button) findViewById(R.id.btnexit); 
+ 
+        list.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                Intent list1 = </span><span class="s0">new </span><span class="s1">Intent(Hal_Menu_Utama.</span><span class="s0">this</span><span class="s1">, Hal_List.</span><span class="s0">class</span><span class="s1">); 
+                startActivity(list1); 
+            } 
+        }); 
+ 
+        about.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                Intent about1 = </span><span class="s0">new </span><span class="s1">Intent(Hal_Menu_Utama.</span><span class="s0">this</span><span class="s1">, Hal_About.</span><span class="s0">class</span><span class="s1">); 
+                startActivity(about1); 
+            } 
+        }); 
+ 
+        exit.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                finish(); 
+                System.exit(</span><span class="s2">0</span><span class="s1">); 
+            } 
+        }); 
+    } 
+} 
+</span></pre>
+</body>
+</html>

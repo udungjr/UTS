@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.jowyblight.uts.Hal_Menu_Utama">
+
+    <TextView
+        android:id="@+id/textmenuutama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:text="Menu Utama"/>
+
+    <LinearLayout
+        android:id="@+id/lin2"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/textmenuutama">
+
+        <Button
+            android:id="@+id/btnlist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_marginBottom="20dp"
+            android:background="@color/gray"
+            android:text="List Olahraga"/>
+
+        <Button
+            android:id="@+id/btnabout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:layout_marginBottom="20dp"
+            android:background="@color/colorPrimary"
+            android:text="About"/>
+
+        <Button
+            android:id="@+id/btnexit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:background="@color/red"
+            android:text="Exit"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
